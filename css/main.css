@@ -1,0 +1,56 @@
+body {
+	font-family: Helvetica, 'Helvetica Neue', Arial, sans-serif;
+	font-size: 14px;
+
+	margin: 50px;
+}
+
+h1 {
+	font-size: 28px;
+
+	padding: 0px 0px 5px 0px;
+	border-bottom: 1px solid #eee;
+}
+
+p {
+	line-height: 1.5em;
+}
+
+#wrapper {
+	width: 500px;
+	margin: 0px auto;
+}
+
+.bookmark {
+	background: #eee;
+
+	margin: 30px 0px 0px 0px;
+	padding: 20px;
+	border-radius: 5px;
+}
+.bookmark a {
+	font-size: 18px;
+	font-weight: bold;
+	color: #fff;
+	text-align: center;
+	text-decoration: none;
+	background: #09f;
+
+	display: block;
+	width: 150px;
+	margin: 0px auto;
+	padding: 5px 0px;
+
+	border-radius: 5px;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+	box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.3);
+}
+.bookmark a:hover {
+	background: #7aafde;
+}
+.bookmark a:active {
+	background: #118acb;
+	margin-top: 3px;
+	margin-bottom: -3px;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
