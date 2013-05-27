@@ -58,6 +58,7 @@ p {
 	margin-bottom: -3px;
 	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
 }
+.bookmark a.no_usage_statistics { display: none; }
 
 .bookmark label {
 	font-weight: bold;

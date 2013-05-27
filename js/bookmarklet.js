@@ -1,6 +1,7 @@
 $___ = {
 
 	init: function () {
+		console.log(__send_usage_statistics);
 		if (typeof localStorage.xPos == 'undefined') {
 			this.storePosition();
 		} else {
