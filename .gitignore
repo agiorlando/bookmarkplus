@@ -1,2 +1,3 @@
 # Ignore sublime
-/*sublime*
+.sublime-project
+.sublime-workspace
