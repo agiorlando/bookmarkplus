@@ -1,13 +1,13 @@
 $___ = {
 
 	init: function () {
-		if (typeof localStorage.xPos == 'undefined') {
+		if (typeof localStorage.x_pos == 'undefined') {
 			this.storePosition();
 
 			this.sendUsageStatistics(1);
 		} else {
 			if (confirm('Previous position will be restored. Cancel to set new position')) {
-				window.scrollTo(localStorage.xPos, localStorage.yPos);
+				window.scrollTo(localStorage.x_pos, localStorage.y_pos);
 
 				this.sendUsageStatistics(2);
 			} else {
@@ -19,8 +19,8 @@ $___ = {
 	},
 
 	storePosition: function () {
-		localStorage.yPos = window.scrollY;
-		localStorage.xPos = window.scrollX;
+		localStorage.y_pos = window.scrollY;
+		localStorage.x_pos = window.scrollX;
 
 		alert('Bookmark position saved');
 	},
@@ -30,9 +30,9 @@ $___ = {
 			var messages = [null, 'created', 'restored', 'updated'];
 
 			var params = 'url=' + encodeURIComponent(window.location.href) + 
-				'&message=' + messages[user_case] +
-				'&xPos=' + localStorage.xPos +
-				'&yPos=' + localStorage.yPos;
+				'&message=' + messages[use_case] +
+				'&x_pos=' + localStorage.x_pos +
+				'&y_pos=' + localStorage.y_pos;
 
 			var img = document.createElement('img');
 			img.style.display = 'none';
