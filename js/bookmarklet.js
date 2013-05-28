@@ -27,26 +27,17 @@ $___ = {
 
 	sendUsageStatistics: function (use_case) {
 		if (__send_usage_statistics) {
-			var message = '';
+			var messages = [null, 'created', 'restored', 'updated'];
 
-			switch (use_case) {
-				case 1:
-					message = 'updated';
-				break;
+			var params = 'url=' + encodeURIComponent(window.location.href) + 
+				'&message=' + messages[user_case] +
+				'&xPos=' + localStorage.xPos +
+				'&yPos=' + localStorage.yPos;
 
-				case 2:
-					message = 'restored';
-				break;
-
-				case 3:
-					message = 'updated';
-				break;
-			}
-
-			var params = '?url=' + encodeURIComponent(window.location.href) + '&message=' + message + '&xPos=' + localStorage.xPos + '&yPos=' + localStorage.yPos;
 			var img = document.createElement('img');
 			img.style.display = 'none';
-			img.src = 'http://bookmarkplus.hp.af.cm/report.php' + params;
+			img.src = 'http://bookmarkplus.hp.af.cm/report.php?' + params;
+
 			document.body.appendChild(img);
 		}
 	}
@@ -54,7 +45,7 @@ $___ = {
 };
 
 (function(){
-	(window.myBookmarklet = function() {
+	(window.bookmarkPlus = function() {
 		$___.init();
 	})();
 })();
