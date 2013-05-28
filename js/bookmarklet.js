@@ -1,5 +1,7 @@
 $___ = {
 
+	messages: [null, 'created', 'restored', 'updated'],
+
 	init: function () {
 		if (typeof localStorage.x_pos == 'undefined') {
 			this.storePosition();
@@ -27,10 +29,8 @@ $___ = {
 
 	sendUsageStatistics: function (use_case) {
 		if (__send_usage_statistics) {
-			var messages = [null, 'created', 'restored', 'updated'];
-
 			var params = 'url=' + encodeURIComponent(window.location.href) + 
-				'&message=' + messages[use_case] +
+				'&message=' + this.messages[use_case] +
 				'&x_pos=' + localStorage.x_pos +
 				'&y_pos=' + localStorage.y_pos;
 
